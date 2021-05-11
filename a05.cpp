@@ -1,17 +1,15 @@
-//*****************************************************************************
+//****************************************************************************
 //   Author:      Joshua Alcantar
 //   Assignment:  CS-161 Assignment 5
-//   Date:        
-//   Description: 
-//   Input:       
-//   Output:      
-//   Returns:     
-//   Sources:     
+//   Date:        05/10/2021
+//   Description: Fitness membership and applied discounts program
+//   Input:       Menu selection, age, length of membership, training sessions 
+//   Output:      Cost of membership, plus training, less discounts
+//   Returns:     None
+//   Sources:     None
 //****************************************************************************
 
 #include <iomanip>
-#include <string>
-#include <cmath>
 #include <iostream>
 
 using namespace std;
