@@ -1,12 +1,12 @@
-//*****************************************************************************
+//****************************************************************************
 //   Author:      Joshua Alcantar
 //   Assignment:  CS-161 Assignment 5
-//   Date:        
-//   Description: 
-//   Input:       
-//   Output:      
-//   Returns:     
-//   Sources:     
+//   Date:        05/11/2021
+//   Description: Interactive menu that outputs cost of gym membership
+//   Input:       Menu selection, user age, and training sessions 
+//   Output:      Menu options, discounts, line costs and total cost
+//   Returns:     None
+//   Sources:     None
 //****************************************************************************
 
 #include <iomanip>
