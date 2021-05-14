@@ -39,8 +39,7 @@ int main() {
    // variable declarations
    char userEntry = ' ';
    bool senior = false;
-   int months = 0;
-   int personal = 0;
+   int months = 0, personal = 0;
 
    while (userEntry != 'b') {
       welcome();
