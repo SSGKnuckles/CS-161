@@ -26,9 +26,8 @@ int main(void) {
     int minVal = list[0];
             
     for (int i = 0; i < listSize; i++) {
-        if (minVal < list[i])
+        if (minVal > list[i])
             minVal = list[i];
-        else
     }
     for (int i = 0; i < listSize; i++) {
         cout << list[i] - minVal << " ";

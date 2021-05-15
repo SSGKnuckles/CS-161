@@ -30,7 +30,8 @@ int main() {
 
 void insertItem(int list[], int& count, int val, int pos)
 {
-	/* Your solution goes here  */
-	/*Use a for loop to shift items to remove the item in index delIndex*/
-
+    for (int i = count - 1; i > pos; i--) {
+        list[i] = list[i -1];
+    }
+    list[pos] = val;
 }
