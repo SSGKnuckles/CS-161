@@ -1,17 +1,10 @@
 //****************************************************************************
 //   Author:      Joshua Alcantar
 //   Assignment:  CS-161 Assignment 5
-<<<<<<< HEAD:a05.cpp
-//   Date:        05/10/2021
-//   Description: Fitness membership and applied discounts program
-//   Input:       Menu selection, age, length of membership, training sessions 
-//   Output:      Cost of membership, plus training, less discounts
-=======
 //   Date:        05/11/2021
 //   Description: Interactive menu that outputs cost of gym membership
 //   Input:       Menu selection, user age, and training sessions 
 //   Output:      Menu options, discounts, line costs and total cost
->>>>>>> a51543b9dd58de5c075212775250a7c0ed6f2748:alcantar_a05.cpp
 //   Returns:     None
 //   Sources:     None
 //****************************************************************************

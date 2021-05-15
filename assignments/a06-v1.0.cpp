@@ -66,6 +66,9 @@ void printList(int list[], int count)
 	}
 }
 
+// Finds first odd number, copies and adds 1, then inserts the new value to the
+// right shifting all the rest of the array rightwards.
+// Created by Joshua Alcantar 05/14/2021
 void insertNum(int list[], int &count) {
     int pos = 0;
     for (int i = 0; i < count; i++) {
@@ -73,13 +76,15 @@ void insertNum(int list[], int &count) {
             pos = i;
             break;                
     }
-    for (int j = count - 1; j > pos; j++) {
+    for (int j = count - 1; j > pos; j--) {
         list[j] = list[j - 1];
     }
     list[pos + 1] += 1;
     count++;
 }
 
+// Returns a count of all of the even integers in an array given its length.
+// Created by Joshua Alcantar 05/14/2021
 int evenCount(int list[], int count) {
     int evenNums = 0;
     for (int i = 0; i < count; i++) {
