@@ -21,7 +21,7 @@ int main() {
    char input[20][10];
    int freq[20][1];
 
-   for (int i = 0)
+   for (int i = 0; i < 10; i++)
 
    return 0;
 }
