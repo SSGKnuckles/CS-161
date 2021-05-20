@@ -17,11 +17,27 @@
 using namespace std;
 
 int main() {
+   
+   int words;
+   cin >> words;
+   char input[words][10];
+   int freq[words];
+   int count = 0;
 
-   char input[20][10];
-   int freq[20][1];
-
-   for (int i = 0; i < 10; i++)
+   for (int i = 0; i < words; i++) {
+      cin >> input[i];
+   }
+   for (int i = 0; i < words; i++) {
+      count = 0;
+      for (int j = 0; j < words; j++) {
+         if (strcmp(input[i], input[j]) == 0)
+            count++;
+      }
+      freq[i] = count;
+   }
+   for (int i = 0; i < words; i++) {
+      cout << input[i] << " " << freq[i] << endl;
+   }
 
    return 0;
 }
