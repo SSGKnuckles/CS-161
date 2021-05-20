@@ -16,8 +16,9 @@
 
 #include <iostream>
 #include <cstring>
-#include <string>
 using namespace std;
+
+void RemoveSpaces(char userString[], char userStringNoSpaces[]);
 
 int main() {
     bool palindrome = false;
@@ -38,4 +39,12 @@ int main() {
     cout << userString << " is " << NOT << "a palindrome" << endl;
 
    return 0;
+}
+void RemoveSpaces(char userString[], char userStringNoSpaces[]) {
+    for (int i = 0, j = 0; i <= strlen(userString); i++) {
+        if (userString[i] != ' ') {
+            userStringNoSpaces[j] = userString[i];
+            j++;
+        }
+    }
 }
