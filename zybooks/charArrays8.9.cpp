@@ -16,16 +16,15 @@
 
 #include <iostream>
 #include <cstring>
-#include <string>
 using namespace std;
 
 int main() {
+    int i = 0;
     bool palindrome = false;
     char userString[50];
-    string NOT = "";
     cin.getline(userString, 50);
-    for (int i = 0; i < strlen(userString) / 2; i++) {
-        if (userString[i] == userString[strlen(userString) -1 - i]) {
+    for (i = 0; i <= strlen(userString) / 2; i++) {
+        if (userString[i] == userString[strlen(userString) - i]) {
             palindrome = true;
         }
         else {
@@ -33,9 +32,10 @@ int main() {
             break;
         }
     }
-    if (!palindrome)
-        NOT = "not ";
-    cout << userString << " is " << NOT << "a palindrome" << endl;
+    if (palindrome) 
+        cout << userString << " is a palindrome" << endl;
+    else
+        cout << userString << " is not a palindrome" << endl;
 
    return 0;
 }
