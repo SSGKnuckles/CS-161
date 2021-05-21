@@ -1,7 +1,4 @@
 // Implement the for loop in the function delItem to remove a value in a certain index by shifting the values from the last element in the array.
-
-
-
 //This program has a list of integers and your job is to fill in the function to remove a number at the given position
 #include <iostream>
 using namespace std;
