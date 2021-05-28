@@ -36,7 +36,7 @@ int main() {
 
    while (userEntry != 'b') {
       welcome();
-      cout << "\n>> ";
+      cout << "\n";
       cin >> userEntry;
       if (userEntry == 'b')
          continue;

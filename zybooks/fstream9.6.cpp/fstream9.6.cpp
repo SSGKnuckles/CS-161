@@ -26,13 +26,30 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main()
 {
-   
-   
-   
-   
-   
+    int rows = 0;
+    char item[5][20];
+    int avgs[5][2];
+    int totals[5];
+    ifstream inFile;
+    inFile.open("C:\\Users\\joshu\\Documents\\PCC Spring 2021\\CS-161\\zybooks\\fstream9.6.cpp\\consuming.txt");
+    if (!inFile.is_open()) {
+        cout << "Open file failed!" << endl;
+        return 1;
+    }
+// read in the data from file
+    while (!inFile.eof()) {
+        inFile >> item[rows] >> avgs[rows][0] >> avgs[rows][1];
+        rows++;
+    }
+// calculate annual avgs
+    for (int i = 0; i < rows; i ++) {
+        totals[i] = (avgs[i][0] * 5 * 52) + (avgs[i][1] * 2 * 52);
+        cout << item[i] << " " << avgs[i][0] << " " << avgs[i][1] << " " << totals[i] << endl;
+    }  
    
    
    return 0;
