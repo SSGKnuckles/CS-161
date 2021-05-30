@@ -5,7 +5,7 @@
 //Description:  
 //Input:        No input
 //Output:       List of numbers
-//Sources:      'a06.cpp starter file' by GD Iyer
+//Sources:      Southern Poverty Law Center Hate Groups 2020
 //***********************************************************
 
 #include <iostream>
@@ -34,8 +34,11 @@ int main() {
     int ideologyCount, organizationCount;
     char ideology[1000][31], organization[1000][31];
 
+    cout << "Please input filename for hate group data: ";
+            cin >> filename;
+
     welcome();
-    inputFilename(inFile, filename[]);
+    inputFilename(inFile, filename);
 
     return 0;
 }
