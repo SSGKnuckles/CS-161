@@ -1,10 +1,9 @@
 #ifndef RESTAURANT_H
 #define RESTAURANT_H
 
-struct Restaurant;
-Restaurant listing {
+struct Restaurant {
     char restaurantName[101];        
-    char foodType[101;
+    char foodType[101];
     double rating;
 }
 
