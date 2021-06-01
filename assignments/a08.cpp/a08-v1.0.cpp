@@ -20,15 +20,14 @@
 using namespace std;
 
 int main() {
-    
     ifstream inFile;
+    char filename[51] = "restaurants.txt";
+    openFile(inFile, filename);
+    int fileLength = fileLength(inFile, fileLength);
+    restaurant database[fileLength];
+    
 
 
 
-
-    infile.open()
-
-
-
-    return 0
+    return 0;
 }

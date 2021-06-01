@@ -14,11 +14,7 @@
             "cStandard": "gnu17",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-gcc-x64",
-<<<<<<< HEAD
             "compilerPath": "C:\\Program Files\\mingw-w64\\mingw64\\bin\\g++"
-=======
-            "compilerPath": "C:\\Program Files\\mingw-w64\\mingw64\\bin\\g++.exe"
->>>>>>> 3a7cd2bf6e892ee35ee15d30d71c423db667efba
         }
     ],
     "version": 4
