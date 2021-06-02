@@ -20,12 +20,43 @@
 using namespace std;
 
 int main() {
+    char menuSelect, searchString[51];
+    // Build local restaurant database
     ifstream inFile;
     char filename[51] = "restaurants.txt";
-    openFile(inFile, filename);
-    int fileLength = fileLength(inFile, fileLength);
+    if (!openFile(inFile, filename) {
+        cout << "Failed to open data file, exiting."
+        return 0
+    }
+    int fileLength = inFileLen(inFile, fileLength);
     restaurant database[fileLength];
-    
+    setValues(inFile, database, fileLength);
+
+    // Start UX    
+    welcome();
+    while (tolower(menuSelect) != 'q') {
+        menu();
+        while (!readMenuSelect(menuSelect)) {
+            cout << "**Invalid entry**" << endl;
+        }
+        switch (tolower(menuSelect)) {
+            case 'p':
+                printValues(database, fileLength);
+                break;
+
+            case 's':
+                
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+
+
+
 
 
 
