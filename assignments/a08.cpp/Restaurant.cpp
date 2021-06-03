@@ -80,8 +80,8 @@ void searchValues(char searchString[], restaurant database[], int& filelength) {
     for (int row = 0; row < filelength; j++) {
         for (int index = 0; index < strlen(database[row].restaurantName); index++) {
                 if (searchString[0] == database[row].restaurantName[index]) {
-                    if (strcmp(searchString, database[row].restaurantName.substr(index, strlen(searchString) - 1) == 0) {
-                        
+                    if (strcmp(tolower(searchString), tolower(database[row].restaurantName.substr(index, strlen(searchString)) - 1) == 0) {
+
                     }
             }
         }
