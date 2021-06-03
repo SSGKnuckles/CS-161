@@ -1,11 +1,10 @@
 //*********************************************************
 //Author:       Alcantar, Joshua
-//Assignment:   Assignment 07
-//Date:         05/28/2021
+//Assignment:   Assignment 08
+//Date:         06/03/2021
 //Description:  Search a table for baby names [1880-1988]
 //Input:        User specifies year of interest
-//Output:       Greeting, ist of restaurants, search results,
-//               
+//Output:       Greeting, list of restaurants, search results
 //Sources:      
 //***********************************************************
 
@@ -17,6 +16,10 @@
 #include <array>
 #include <iomanip>
 
+// struct and prototypes
+#include "Restaurant.h"
+#include "Restaurant.cpp"
+
 using namespace std;
 
 int main() {
@@ -24,11 +27,12 @@ int main() {
     // Build local restaurant database
     ifstream inFile;
     char filename[51] = "restaurants.txt";
-    if (!openFile(inFile, filename) {
+    if (!openFile(inFile, filename)) {
         cout << "Failed to open data file, exiting."
-        return 0
+        return 0;
     }
-    int fileLength = inFileLen(inFile, fileLength);
+    int fileLength; 
+    inFileLen(inFile, fileLength);
     restaurant database[fileLength];
     setValues(inFile, database, fileLength);
 
@@ -45,7 +49,7 @@ int main() {
                 break;
 
             case 's':
-                
+                searchValues(searchString, inFile, fileLength);
                 break;
 
             default:
