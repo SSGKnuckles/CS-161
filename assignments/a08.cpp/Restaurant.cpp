@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <iomanip>
-#include <istream>
+#include <fstream>
 
 #include "Restaurant.h"
 
@@ -34,7 +34,7 @@ bool readMenuSelect(char& userEntry) {
 }
 
 // Reads data from file and stores local database in struct
-void setValues(ifstream& inFile, restaurant database[], int& fileLength) {
+void setValues(ifstream& inFile, restaurant* database, int& fileLength) {
     int i = 0;
     while (!inFile.eof()) {
         inFile >> database[i].restaurantName >> database[i].foodType >> database[i].rating;
@@ -72,7 +72,7 @@ void inFileLen(ifstream& inFile, int& fileLength) {
 	inFile.seekg(0);
 }
 
-void searchValues(char searchString[], restaurant database[], int& filelength) {
+void searchValues(char* searchString[], restaurant* database[], int& filelength) {
     bool match = false;
     cout << "\nInput restaurant name to search for: " << endl;
     cin.getline(searchString, 100, '\n');

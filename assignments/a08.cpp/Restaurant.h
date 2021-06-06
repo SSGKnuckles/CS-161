@@ -8,6 +8,8 @@ struct restaurant {
     double rating;
 };
 
+ifstream inFile;
+
 // Related functions
 bool openFile(ifstream& inFile, char filename[]);
 void inFileLen(ifstream& inFile, int& fileLength);
@@ -16,6 +18,6 @@ void welcome();
 void menu();
 bool readMenuSelect(char& userEntry);
 void printValues(restaurant& database, int& fileLength);
-void searchValues(char searchString[], restaurant& database, int& filelength);
+void searchValues(char* searchString[], restaurant& database, int& filelength);
 
 #endif

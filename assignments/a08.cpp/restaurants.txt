@@ -16,5 +16,5 @@ Ringside_Steakhouse American 3.5
 Ghandi's Indian 3.7
 Luc_Lac Vietnamese 4.1
 Pizzacato Pizza 3.2
-9_Dang_Fine_Thai 3.4
+9_Dang_Fine_Thai Thai 3.4
 Syun_Izakaya Sushi 3.9
