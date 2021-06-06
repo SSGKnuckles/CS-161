@@ -2,7 +2,7 @@
 #define RESTAURANT_H
 using namespace std;
 
-struct restaurant {
+struct Restaurant {
     char restaurantName[101];        
     char foodType[101];
     double rating;
@@ -13,11 +13,11 @@ ifstream inFile;
 // Related functions
 bool openFile(ifstream& inFile, char filename[]);
 void inFileLen(ifstream& inFile, int& fileLength);
-void setValues(restaurant& database, char newName[], char newFood[], double newRating);
+void setValues(ifstream& inFile, Restaurant database[], int& fileLength);
 void welcome();
 void menu();
 bool readMenuSelect(char& userEntry);
-void printValues(restaurant& database, int& fileLength);
-void searchValues(char* searchString[], restaurant& database, int& filelength);
+void printValues(Restaurant database[], int& fileLength);
+void searchValues(char searchString[], Restaurant database[], int& filelength);
 
 #endif
