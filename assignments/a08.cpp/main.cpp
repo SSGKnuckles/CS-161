@@ -8,17 +8,10 @@
 //Sources:      
 //***********************************************************
 
-#include <fstream>
-#include <iostream>
-#include <cstring>
-#include <string>
-#include <cmath>
-#include <array>
-#include <iomanip>
-
 #include "Restaurant.h"
 
 int main() {
+    ifstream inFile;
     char menuSelect = '\0', searchString[51];
     // Build local restaurant database
     char filename[51] = "restaurants.txt";
@@ -28,7 +21,7 @@ int main() {
     }
     int fileLength = 0; 
     inFileLen(inFile, fileLength);
-    Restaurant database[fileLength];
+    Restaurant database[20];
     setValues(inFile, database, fileLength);
 
     // Start UX    

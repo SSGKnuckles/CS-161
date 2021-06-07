@@ -1,8 +1,3 @@
-#include <iostream>
-#include <cstring>
-#include <iomanip>
-#include <fstream>
-
 #include "Restaurant.h"
 
 using namespace std;
@@ -94,6 +89,8 @@ void searchValues(char searchString[], Restaurant database[], int& filelength) {
             cout << setw(25) << left << database[row].rating << endl;
         }
     }
-    if (!match)
+    if (!match) {
         cout << "\nNo matches found for: " << searchString << "\n";
+    }
+    match = false;
 }

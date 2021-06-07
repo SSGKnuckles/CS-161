@@ -1,5 +1,14 @@
 #ifndef RESTAURANT_H
 #define RESTAURANT_H
+
+#include <fstream>
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <cmath>
+#include <array>
+#include <iomanip>
+
 using namespace std;
 
 struct Restaurant {
@@ -7,8 +16,6 @@ struct Restaurant {
     char foodType[101];
     double rating;
 };
-
-ifstream inFile;
 
 // Related functions
 bool openFile(ifstream& inFile, char filename[]);
