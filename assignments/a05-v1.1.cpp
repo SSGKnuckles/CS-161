@@ -28,6 +28,7 @@ void calcCost(bool senior, int months, int personal);
 
 // Main code block
 int main() {
+   setlocale(LC_ALL, "");
    cout << fixed << setprecision(2);
    // variable declarations
    char userEntry = ' ';
@@ -40,7 +41,7 @@ int main() {
       cin >> userEntry;
       if (userEntry == 'b')
          continue;
-      if (userEntry == 'a') {
+      else if (userEntry == 'a') {
          getInfo(senior, months, personal);
          calcCost(senior, months, personal);
          cout << "\nThank you for checking out my fitClub center!! " \
@@ -52,24 +53,26 @@ int main() {
 }
 
 // Functions defined
+
+// Displays gym info (costs/discounts) and menu selection
 void welcome() {
    cout << "Welcome to my fitClub program!!" << endl;
    cout << "The cost to become a member of the fitClub center is as follows:" \
         << endl;
-   cout << "\t\u2022 The membership fee per month is $20.00" << endl;
-   cout << "\t\u2022 The personal training session fee per session is $10.00" \
+   wcout << "\t\u2022 The membership fee per month is $20.00" << endl;
+   wcout << "\t\u2022 The personal training session fee per session is $10.00" \
         << endl;
-   cout << "\t\u2022 If the membership is bought and paid for 12 or more " << \
+   wcout << "\t\u2022 If the membership is bought and paid for 12 or more " << \
            "months, the" << endl;
    cout << "\t  discount is 10% off membership cost" << endl;
-   cout << "\t\u2022 If more than five personal training sessions are bought and" << endl;
+   wcout << "\t\u2022 If more than five personal training sessions are bought and" << endl;
    cout << "\t  paid for, the discount on each session is 20%." << endl;
-   cout << "\t\u2022 The senior citizens discount is 30% off the total amount." << endl;
+   wcout << "\t\u2022 The senior citizens discount is 30% off the total amount." << endl;
    cout << "\nPlease pick one of the following options:\n" << endl;
    cout << "\t\t a. Calculate membership costs." << endl;
    cout << "\t\t b. quit this program." << endl;
 }
-
+// Takes user input for all screening questions for total costs calculation
 void getInfo(bool& senior, int& months, int& personal) {
    char userEntry = ' ';
    cout << "\nAre you a Senior Citizen (y/n): ";
@@ -82,7 +85,7 @@ void getInfo(bool& senior, int& months, int& personal) {
    cout << "\nHow many personal training sessions would you like? ";
    cin >> personal;
 }
-
+// Calculates total cost of gym membership after discounts applied
 void calcCost(bool senior, int months, int personal) {
    double totalCost = 0;
    double trainingCost = 0;

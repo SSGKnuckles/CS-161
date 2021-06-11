@@ -3,9 +3,7 @@
 //Assignment:   Assignment 06 Starter file.
 //Date:         05/14/2021
 //Description:  Using starter file for Assignment 6. It builds a list
-//              using the random number generator. It has a print function to
-//              print the list.  You need to complete the insertNum() function
-//              and evenCount()
+//              using the random number generator. 
 //Input:        No input
 //Output:       List of numbers
 //Sources:      'a06.cpp starter file' by GD Iyer
@@ -70,16 +68,15 @@ void printList(int list[], int count)
 // right shifting all the rest of the array rightwards.
 // Created by Joshua Alcantar 05/14/2021
 void insertNum(int list[], int &count) {
-    int pos = 0;
     for (int i = 0; i < count; i++) {
-        if (list[i] % 2 == 1)
-            pos = i;
-            break;                
+        if (list[i] % 2 == 1) { // find odd number
+            for (int j = count; j > i; j--) { // shift values right
+                list[j] = list[j - 1];
+            }
+        list[i + 1] += 1;
+        break;
+        }
     }
-    for (int j = count - 1; j > pos; j--) {
-        list[j] = list[j - 1];
-    }
-    list[pos + 1] += 1;
     count++;
 }
 
